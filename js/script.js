@@ -9,24 +9,16 @@ console.group('about');
     console.groupEnd();
 console.groupEnd();
 
+const arr = ['Научились ли вы радоваться препятствиям?', 'Мягкое побеждает твёрдое','Худший из наших недостатков - это наш интерес к недостаткам других людей.','Подумайте о себе, прежде чем вас привлекут к ответственности. Взвесьте свои поступки, прежде чем их взвесят.']
 
-/*
-let n = 0;
-let q = 0;
 
-let a = 30,
-    b = 18;
-//algorithm euclid
-//большее число делим на меньшее.
-//если делится без остатка, то меньшее число и есть НОД (следует выйти из цикла).
-//если есть остаток, то большее число заменяем на остаток от деления.
-//переходим к пункту 1.
-while (a != 0 & b != 0){
-    if(a > b){//если а больше б, то а присваиваем а/б
-        a = a%b;
-    }else{
-        b = b%a;//наоборот
+const button = document.querySelector("#randText");
+button.addEventListener("click", function() {
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-}
-
-console.log(a+b);*/
+    let i = getRandomInt(0, arr.length - 1)
+    button.textContent = arr[i] 
+});
