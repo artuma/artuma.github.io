@@ -9,16 +9,3 @@ console.group('about');
     console.groupEnd();
 console.groupEnd();
 
-const arr = ['Научились ли вы радоваться препятствиям?', 'Мягкое побеждает твёрдое.','Не убивайте свои сердца большим количеством еды и питья, потому что сердце как растение, погибает, если его поливать слишком обильно','Худший из наших недостатков - это наш интерес к недостаткам других людей.','Подумайте о себе, прежде чем вас привлекут к ответственности. Взвесьте свои поступки, прежде чем их взвесят.']
-
-
-const button = document.querySelector("#randText");
-button.addEventListener("click", function() {
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    let i = getRandomInt(0, arr.length - 1)
-    button.textContent = arr[i] 
-});
